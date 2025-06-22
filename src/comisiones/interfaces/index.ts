@@ -21,13 +21,13 @@ export interface ComisionRequest {
   fechaFin: string;
 }
 
-export interface ComisionResponse {
-  ID_Vendedor: number;
-  Nombre: string;
-  TotalVentas: number;
-  ReglaAplicada: string;
-  Porcentaje: number;
-  Comision: number;
+export interface ComisionResultadoDto {
+  iD_Vendedor: string;
+  nombre: string;
+  totalVentas: number;
+  reglaAplicada: number | string;
+  porcentaje: number;
+  comision: number;
 }
 
 export interface ApiResponse<T> {

@@ -1,5 +1,12 @@
 import axios, { type AxiosInstance, type AxiosResponse } from 'axios'
-import type { ApiResponse, ComisionRequest, ComisionResponse, Regla, Vendedor, Venta } from '@/comisiones/interfaces'
+import type {
+  ApiResponse,
+  ComisionRequest,
+  ComisionResultadoDto,
+  Regla,
+  Vendedor,
+  Venta
+} from '@/comisiones/interfaces'
 
 
 class ApiService {
@@ -74,20 +81,20 @@ class ApiService {
     }
   }
 
-  async calcularComisiones(request: ComisionRequest): Promise<ComisionResponse[]> {
+  async calcularComisiones(request: ComisionRequest): Promise<ComisionResultadoDto[]> {
     try {
       const params = new URLSearchParams({
         fechaInicio: request.fechaInicio,
         fechaFin: request.fechaFin,
       });
 
-      const response = await this.axiosInstance.get<ApiResponse<ComisionResponse[]>>(
+      const response = await this.axiosInstance.get<ComisionResultadoDto[]>(
         `/api/Comisiones?${params.toString()}`
       );
 
-      return response.data.data || response.data;
+      return response.data;
     } catch (error) {
-      console.error('Error calculating comisiones:', error);
+      console.error('Error calculando comisiones:', error);
       throw new Error('No se pudieron calcular las comisiones');
     }
   }
