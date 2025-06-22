@@ -55,14 +55,22 @@
 > - [FrontEnd con VueJs y TypeScript](https://github.com/AngelDavidStudios/UI-minicore-2025)
 
 
-
-
 ## Link de la Aplicación Web en Netlify
-> - [Mini Core 2025](https://minicore-25.netlify.app/)
+> - [minicore-25.netlify.app](https://minicore-25.netlify.app/)
 
 
 ## Tutorial Desarrollo del proyecto FullStack desde cero.
-> - [Guia Creación de un mini proyecto FullStack con .Net y VueJs](https://minicore-25.netlify.app/)
+> - [Parte 1: Demostración del MiniCore y explicación. ](https://youtu.be/Ul01LoOcyxg)
+> - [Parte 2: Creación del WebApi e instalación.](https://youtu.be/PWowOE9ZQe4)
+> - [Parte 3: Creación de la capa Model.](https://youtu.be/HtI71IiE1Kc)
+> - [Parte 4: Patrón Repository Parte 1](https://youtu.be/wBmBHd4W7Ck)
+> - [Parte 5: Patrón Repository Parte 2](https://youtu.be/Ph65m-oKJlU)
+> - [Parte 6: Mini-Core Filtración y calculo de comisiones](https://youtu.be/TWrG2netDgs)
+> - [Parte 7: Creación de los controladores](https://youtu.be/xBPmAFOiy2M)
+> - [Parte 8: Inyección de dependencias y pruebas](https://youtu.be/ZJe_KKlJQxk)
+> - [Parte 9: Implementación de VueJs y patrón Facade](https://youtu.be/eoNSyfhV7Ck)
+> - [Parte 10: Gestor de estados globales Pinia.](https://youtu.be/yu_QPcWNkHw)
+> - [Playlist completa en Youtube.](https://www.youtube.com/watch?v=Ul01LoOcyxg&list=PL-cuocmien-xfGfX6uDDurricgqFMX96E)
 
 ## Instrucciones
 
