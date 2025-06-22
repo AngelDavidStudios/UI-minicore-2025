@@ -67,7 +67,66 @@ const badgeClasses = computed(() => {
 </script>
 
 <template>
+  <div
+    class="pokemon-card group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
+    :class="cardClasses"
+    @click="$emit('click', $event)"
+  >
+    <!-- Header con ícono -->
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center space-x-3">
+        <div
+          class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold shadow-lg"
+          :class="iconBgClass"
+        >
+          {{ iconText }}
+        </div>
+        <div class="flex flex-col">
+          <h3 class="font-bold text-gray-800 group-hover:text-white transition-colors">
+            {{ title }}
+          </h3>
+          <p class="text-sm text-gray-600 group-hover:text-gray-200 transition-colors">
+            {{ subtitle }}
+          </p>
+        </div>
+      </div>
 
+      <!-- Badge opcional -->
+      <div
+        v-if="badge"
+        class="px-3 py-1 rounded-full text-xs font-semibold"
+        :class="badgeClasses"
+      >
+        {{ badge }}
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="space-y-3">
+      <slot name="content"></slot>
+
+      <!-- Stats opcionales -->
+      <div v-if="stats && stats.length > 0" class="grid grid-cols-2 gap-2 mt-4">
+        <div
+          v-for="stat in stats"
+          :key="stat.label"
+          class="text-center p-2 bg-white bg-opacity-20 rounded-lg"
+        >
+          <div class="font-bold text-lg text-gray-800 group-hover:text-white transition-colors">
+            {{ stat.value }}
+          </div>
+          <div class="text-xs text-gray-600 group-hover:text-gray-200 transition-colors">
+            {{ stat.label }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer con acciones -->
+    <div v-if="$slots.actions" class="mt-4 pt-4 border-t border-white border-opacity-20">
+      <slot name="actions"></slot>
+    </div>
+  </div>
 </template>
 
 <style scoped>
