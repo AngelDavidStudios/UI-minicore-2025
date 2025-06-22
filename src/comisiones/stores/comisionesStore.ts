@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import type { ComisionRequest, ComisionResponse } from '@/comisiones/interfaces'
+import type { ComisionRequest, ComisionResultadoDto } from '@/comisiones/interfaces'
 import apiService from '@/comisiones/services/apiService.ts'
 
 
 export const useComisionesStore = defineStore('comisiones', () => {
-  const comisiones = ref<ComisionResponse[]>([]);
+  const comisiones = ref<ComisionResultadoDto[]>([]);
   const loading = ref(false);
   const error = ref<string | null>(null);
   const ultimaConsulta = ref<ComisionRequest | null>(null);

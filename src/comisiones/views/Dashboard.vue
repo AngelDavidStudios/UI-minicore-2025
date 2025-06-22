@@ -20,8 +20,6 @@ const {
   validacionError,
   comisiones,
   loading,
-  totalComisiones,
-  totalVendido,
   isFormularioValido,
   calcular,
   limpiar,
@@ -205,7 +203,7 @@ onMounted(async () => {
                   <div class="space-y-2">
                     <div class="flex justify-between items-center">
                       <span class="text-sm text-gray-600 group-hover:text-gray-200">Regla:</span>
-                      <span class="font-semibold text-gray-800 group-hover:text-white">{{ comision.ReglaAplicada }}</span>
+                      <span class="font-semibold text-gray-800 group-hover:text-white">{{ comision.reglaAplicada }}</span>
                     </div>
                   </div>
                 </template>
